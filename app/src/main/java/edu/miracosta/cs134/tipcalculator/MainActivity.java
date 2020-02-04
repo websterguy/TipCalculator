@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 // Read input from the percentSeekBar
                 currentBill.setTipPercent(percentSeekBar.getProgress() / 100.0);
-                percentTextView.setText(percent.format(percentSeekBar.getProgress() / 100.0));
+                percentTextView.setText(percent.format(currentBill.getTipPercent()));
                 calculateBill();
             }
 
